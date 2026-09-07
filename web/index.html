@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PBX Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div><h1>PBX Agent</h1><p>Supervision Asterisk en temps réel</p></div>
+    <div id="ami-health" class="badge">AMI...</div>
+  </header>
+  <main>
+    <section class="cards">
+      <article><span>Extensions</span><strong id="extensions-count">0</strong></article>
+      <article><span>Endpoints PJSIP</span><strong id="endpoints-count">0</strong></article>
+      <article><span>Canaux actifs</span><strong id="channels-count">0</strong></article>
+    </section>
+    <section class="toolbar">
+      <input id="search" placeholder="Rechercher une extension...">
+      <select id="status-filter"><option value="">Tous les états</option><option value="status-green">En appel / occupé</option><option value="status-yellow">Libre</option><option value="status-orange">Sonnerie / attente</option><option value="status-red">Inaccessible</option></select>
+    </section>
+    <section class="panel">
+      <h2>Extensions</h2>
+      <table><thead><tr><th>Extension</th><th>Contexte</th><th>État</th><th>Mise à jour</th></tr></thead><tbody id="extensions"></tbody></table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

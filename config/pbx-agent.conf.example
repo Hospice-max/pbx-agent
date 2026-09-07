@@ -1,0 +1,19 @@
+[asterisk]
+host = 127.0.0.1
+port = 5038
+username = pbx_agent
+secret = CHANGE_ME
+connect_timeout = 10
+reconnect_initial = 2
+reconnect_max = 30
+
+[agent]
+state_file = /var/lib/pbx-agent/state.json
+log_level = INFO
+
+[http]
+host = 127.0.0.1
+port = 8099
+
+[security]
+allow_origins =

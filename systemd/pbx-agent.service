@@ -1,0 +1,21 @@
+[Unit]
+Description=PBX Agent - Asterisk monitoring agent
+After=network-online.target asterisk.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/pbx-agent
+ExecStart=/usr/bin/python3 -m agent.main --config /etc/pbx-agent/pbx-agent.conf --web-root /opt/pbx-agent/web
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/lib/pbx-agent
+
+[Install]
+WantedBy=multi-user.target
