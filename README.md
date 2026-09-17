@@ -61,7 +61,7 @@ The agent itself does not require Apache, Nginx, PHP, Node.js or a Python packag
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_ORG/pbx-agent.git
+git clone https://github.com/Hospice-max/pbx-agent.git
 cd pbx-agent
 ```
 
